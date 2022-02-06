@@ -15,7 +15,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import com.auth0.jwt.exceptions.JWTVerificationException;
-import com.daniel.hundirflota.service.MyUserDetailsService;
 
 @Component
 public class JWTFilter extends OncePerRequestFilter {
@@ -38,8 +37,8 @@ public class JWTFilter extends OncePerRequestFilter {
 				try {
 					String email = jwtUtil.validateTokenAndRetrieveSubject(jwt);
 					UserDetails userDetails = userDetailsService.loadUserByUsername(email);
-					UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(email, userDetails.getPassword());
-					userDetails.getAuthorities();
+					UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(
+							email, userDetails.getPassword(), userDetails.getAuthorities());
 					
 					if (SecurityContextHolder.getContext().getAuthentication() == null) {
 						SecurityContextHolder.getContext().setAuthentication(authToken);

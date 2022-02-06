@@ -1,4 +1,4 @@
-package com.daniel.hundirflota.service;
+package com.daniel.hundirflota.security;
 
 import java.util.Collections;
 import java.util.Optional;
@@ -8,10 +8,12 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Component;
 
 import com.daniel.hundirflota.entity.User;
 import com.daniel.hundirflota.repository.UserRepository;
 
+@Component
 public class MyUserDetailsService implements UserDetailsService {
 
 	@Autowired
