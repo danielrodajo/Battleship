@@ -1,5 +1,6 @@
 package com.daniel.hundirflota.entity;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -19,7 +20,12 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @Column(unique=true)
     private String email;
+    
+    private String name;
+    
+    private String surname;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;

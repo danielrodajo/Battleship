@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.AuthenticationException;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,23 +14,19 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.daniel.hundirflota.entity.User;
 import com.daniel.hundirflota.models.LoginCredentials;
-import com.daniel.hundirflota.repository.UserRepository;
 import com.daniel.hundirflota.security.JWTUtil;
+import com.daniel.hundirflota.service.UserService;
 
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
-	
-	@Autowired private UserRepository userRepository;
+	@Autowired private UserService userService;
     @Autowired private JWTUtil jwtUtil;
     @Autowired private AuthenticationManager authManager;
-    @Autowired private PasswordEncoder passwordEncoder;
     
     @PostMapping("/register")
     public Map<String, Object> registerHandler(@RequestBody User user) {
-    	String encodedPass = passwordEncoder.encode(user.getPassword());
-    	user.setPassword(encodedPass);
-    	user = userRepository.save(user);
+    	user = userService.save(user);
     	String token = jwtUtil.generateToken(user.getEmail());
     	
     	return Collections.singletonMap("jwt-token", token);
