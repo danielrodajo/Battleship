@@ -19,7 +19,6 @@ class Coordinates{
     int x;
     int y;
 }
-
 @Entity
 @Data
 @NoArgsConstructor
