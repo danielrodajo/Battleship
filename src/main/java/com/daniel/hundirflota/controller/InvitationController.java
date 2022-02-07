@@ -20,7 +20,7 @@ public class InvitationController extends GlobalController {
 	
 	@PostMapping("/send")
     public Boolean senderHandler(@RequestBody CreateInvitation createInvitation) {
-    	AppUser transmitter = userService.findById(createInvitation.getTransmitter());
+    	AppUser transmitter = userService.findById(getAppUserDetails().getId());
     	AppUser receiver = userService.findById(createInvitation.getReceiver());
     	
     	Boolean isSended = invitationService.sendInvitation(transmitter, receiver);

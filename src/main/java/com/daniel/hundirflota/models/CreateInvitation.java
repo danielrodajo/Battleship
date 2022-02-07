@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 @Data
 public class CreateInvitation {
 
-	private Long transmitter;
 	private Long receiver;
 	
 }

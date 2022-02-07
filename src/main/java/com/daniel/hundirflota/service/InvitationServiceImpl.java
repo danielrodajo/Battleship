@@ -40,8 +40,8 @@ public class InvitationServiceImpl implements InvitationService {
 
 	@Override
 	public List<Invitation> getInvitations(AppUser user) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Invitation> invitations = invitationRepository.findByReceiver(user);
+		return invitations;
 	}
 
 }
