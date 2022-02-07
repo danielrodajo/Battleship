@@ -10299,3 +10299,80 @@ Consider defining a bean of type 'org.modelmapper.ModelMapper' in your configura
 2022-02-07 13:30:44 [http-nio-8080-exec-1] INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2022-02-07 13:30:44 [http-nio-8080-exec-1] INFO  - Initializing Servlet 'dispatcherServlet'
 2022-02-07 13:30:44 [http-nio-8080-exec-1] INFO  - Completed initialization in 1 ms
+2022-02-07 13:35:17 [main] INFO  - Starting HundirflotaApplication using Java 17.0.1 on DESKTOP-D87BROG with PID 26336 (G:\workspaces\spring-workspaces\Battleship\target\classes started by danie in G:\workspaces\spring-workspaces\Battleship)
+2022-02-07 13:35:17 [main] INFO  - The following profiles are active: pre
+2022-02-07 13:35:18 [main] INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-07 13:35:18 [main] INFO  - Finished Spring Data repository scanning in 22 ms. Found 5 JPA repository interfaces.
+2022-02-07 13:35:18 [main] INFO  - Tomcat initialized with port(s): 8080 (http)
+2022-02-07 13:35:18 [main] INFO  - Starting service [Tomcat]
+2022-02-07 13:35:18 [main] INFO  - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-07 13:35:18 [main] INFO  - Initializing Spring embedded WebApplicationContext
+2022-02-07 13:35:18 [main] INFO  - Root WebApplicationContext: initialization completed in 556 ms
+2022-02-07 13:35:18 [main] INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-07 13:35:18 [main] INFO  - HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-02-07 13:35:18 [main] INFO  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-02-07 13:35:18 [main] INFO  - HikariPool-1 - Starting...
+2022-02-07 13:35:18 [main] INFO  - HikariPool-1 - Start completed.
+2022-02-07 13:35:18 [main] INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2022-02-07 13:35:19 [main] INFO  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-07 13:35:19 [main] INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 13:35:19 [main] WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-07 13:35:19 [main] INFO  - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4cd9ee2c, org.springframework.security.web.context.SecurityContextPersistenceFilter@1a6a4595, org.springframework.security.web.header.HeaderWriterFilter@56adbb07, org.springframework.web.filter.CorsFilter@1631dbbc, org.springframework.security.web.authentication.logout.LogoutFilter@3c5bb37d, com.daniel.hundirflota.security.JWTFilter@182fd26b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4965454c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1abea1ed, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3b663112, org.springframework.security.web.session.SessionManagementFilter@7c6fc278, org.springframework.security.web.access.ExceptionTranslationFilter@1a712f12, org.springframework.security.web.access.intercept.AuthorizationFilter@140cfc5f]
+2022-02-07 13:35:19 [main] INFO  - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-07 13:35:19 [main] INFO  - Started HundirflotaApplication in 1.859 seconds (JVM running for 2.174)
+2022-02-07 13:39:17 [RMI TCP Connection(8)-127.0.0.1] INFO  - Application shutdown requested.
+2022-02-07 13:39:17 [RMI TCP Connection(8)-127.0.0.1] INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 13:39:17 [RMI TCP Connection(8)-127.0.0.1] INFO  - HikariPool-1 - Shutdown initiated...
+2022-02-07 13:39:17 [RMI TCP Connection(8)-127.0.0.1] INFO  - HikariPool-1 - Shutdown completed.
+2022-02-07 13:39:18 [main] INFO  - Starting HundirflotaApplication using Java 17.0.1 on DESKTOP-D87BROG with PID 20028 (G:\workspaces\spring-workspaces\Battleship\target\classes started by danie in G:\workspaces\spring-workspaces\Battleship)
+2022-02-07 13:39:18 [main] INFO  - The following profiles are active: pre
+2022-02-07 13:39:18 [main] INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-07 13:39:18 [main] INFO  - Finished Spring Data repository scanning in 24 ms. Found 5 JPA repository interfaces.
+2022-02-07 13:39:19 [main] INFO  - Tomcat initialized with port(s): 8080 (http)
+2022-02-07 13:39:19 [main] INFO  - Starting service [Tomcat]
+2022-02-07 13:39:19 [main] INFO  - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-07 13:39:19 [main] INFO  - Initializing Spring embedded WebApplicationContext
+2022-02-07 13:39:19 [main] INFO  - Root WebApplicationContext: initialization completed in 600 ms
+2022-02-07 13:39:19 [main] INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-07 13:39:19 [main] INFO  - HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-02-07 13:39:19 [main] INFO  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-02-07 13:39:19 [main] INFO  - HikariPool-1 - Starting...
+2022-02-07 13:39:19 [main] INFO  - HikariPool-1 - Start completed.
+2022-02-07 13:39:19 [main] INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2022-02-07 13:39:19 [main] INFO  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-07 13:39:19 [main] INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 13:39:20 [main] WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-07 13:39:20 [main] INFO  - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d7f9b33, org.springframework.security.web.context.SecurityContextPersistenceFilter@573f2e67, org.springframework.security.web.header.HeaderWriterFilter@6f5288c5, org.springframework.web.filter.CorsFilter@782e0844, org.springframework.security.web.authentication.logout.LogoutFilter@11896124, com.daniel.hundirflota.security.JWTFilter@1f365a26, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@44e7c06b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3c5bb37d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@608c7b5b, org.springframework.security.web.session.SessionManagementFilter@63af52a6, org.springframework.security.web.access.ExceptionTranslationFilter@251e2f4a, org.springframework.security.web.access.intercept.AuthorizationFilter@694f0655]
+2022-02-07 13:39:20 [main] INFO  - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-07 13:39:20 [main] INFO  - Started HundirflotaApplication in 1.937 seconds (JVM running for 2.278)
+2022-02-07 13:39:25 [http-nio-8080-exec-1] INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-07 13:39:25 [http-nio-8080-exec-1] INFO  - Initializing Servlet 'dispatcherServlet'
+2022-02-07 13:39:25 [http-nio-8080-exec-1] INFO  - Completed initialization in 1 ms
+2022-02-07 13:43:22 [RMI TCP Connection(6)-127.0.0.1] INFO  - Application shutdown requested.
+2022-02-07 13:43:22 [RMI TCP Connection(6)-127.0.0.1] INFO  - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 13:43:22 [RMI TCP Connection(6)-127.0.0.1] INFO  - HikariPool-1 - Shutdown initiated...
+2022-02-07 13:43:23 [RMI TCP Connection(6)-127.0.0.1] INFO  - HikariPool-1 - Shutdown completed.
+2022-02-07 13:43:24 [main] INFO  - Starting HundirflotaApplication using Java 17.0.1 on DESKTOP-D87BROG with PID 34008 (G:\workspaces\spring-workspaces\Battleship\target\classes started by danie in G:\workspaces\spring-workspaces\Battleship)
+2022-02-07 13:43:24 [main] INFO  - The following profiles are active: pre
+2022-02-07 13:43:24 [main] INFO  - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-02-07 13:43:24 [main] INFO  - Finished Spring Data repository scanning in 22 ms. Found 5 JPA repository interfaces.
+2022-02-07 13:43:24 [main] INFO  - Tomcat initialized with port(s): 8080 (http)
+2022-02-07 13:43:24 [main] INFO  - Starting service [Tomcat]
+2022-02-07 13:43:24 [main] INFO  - Starting Servlet engine: [Apache Tomcat/9.0.56]
+2022-02-07 13:43:24 [main] INFO  - Initializing Spring embedded WebApplicationContext
+2022-02-07 13:43:24 [main] INFO  - Root WebApplicationContext: initialization completed in 545 ms
+2022-02-07 13:43:24 [main] INFO  - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-02-07 13:43:24 [main] INFO  - HHH000412: Hibernate ORM core version 5.6.4.Final
+2022-02-07 13:43:24 [main] INFO  - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-02-07 13:43:24 [main] INFO  - HikariPool-1 - Starting...
+2022-02-07 13:43:25 [main] INFO  - HikariPool-1 - Start completed.
+2022-02-07 13:43:25 [main] INFO  - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2022-02-07 13:43:25 [main] INFO  - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-02-07 13:43:25 [main] INFO  - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-02-07 13:43:25 [main] WARN  - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-02-07 13:43:25 [main] INFO  - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1c65ec63, org.springframework.security.web.context.SecurityContextPersistenceFilter@3fc051ce, org.springframework.security.web.header.HeaderWriterFilter@52d434c1, org.springframework.web.filter.CorsFilter@25f73119, org.springframework.security.web.authentication.logout.LogoutFilter@384f0e32, com.daniel.hundirflota.security.JWTFilter@2f498f21, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@558575fe, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7a78d2aa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@10f192d8, org.springframework.security.web.session.SessionManagementFilter@6d8096ee, org.springframework.security.web.access.ExceptionTranslationFilter@2bb84aa5, org.springframework.security.web.access.intercept.AuthorizationFilter@608c7b5b]
+2022-02-07 13:43:25 [main] INFO  - Tomcat started on port(s): 8080 (http) with context path ''
+2022-02-07 13:43:25 [main] INFO  - Started HundirflotaApplication in 1.85 seconds (JVM running for 2.194)
+2022-02-07 13:43:26 [http-nio-8080-exec-2] INFO  - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-02-07 13:43:26 [http-nio-8080-exec-2] INFO  - Initializing Servlet 'dispatcherServlet'
+2022-02-07 13:43:26 [http-nio-8080-exec-2] INFO  - Completed initialization in 0 ms
