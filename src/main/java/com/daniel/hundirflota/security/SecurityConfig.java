@@ -20,7 +20,6 @@ import com.daniel.hundirflota.repository.AppUserRepository;
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Autowired private AppUserRepository userRepo;
     @Autowired private JWTFilter filter;
     @Autowired private MyUserDetailsService uds;
 
@@ -32,7 +31,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeHttpRequests()
                 .antMatchers("/api/auth/**").permitAll()
-                .antMatchers("/api/user/**").hasRole("USER")
+                .antMatchers("/api/user/**", "/api/game/**", "/api/invitation/**").hasRole("USER")
                 .and()
                 .userDetailsService(uds)
                 .exceptionHandling()
