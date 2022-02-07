@@ -14,13 +14,13 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import com.daniel.hundirflota.repository.UserRepository;
+import com.daniel.hundirflota.repository.AppUserRepository;
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    @Autowired private UserRepository userRepo;
+    @Autowired private AppUserRepository userRepo;
     @Autowired private JWTFilter filter;
     @Autowired private MyUserDetailsService uds;
 

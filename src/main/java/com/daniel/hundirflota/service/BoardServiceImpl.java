@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.daniel.hundirflota.entity.Board;
-import com.daniel.hundirflota.entity.User;
+import com.daniel.hundirflota.entity.AppUser;
 import com.daniel.hundirflota.repository.BoardRepository;
 
 @Service
@@ -21,7 +21,7 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public List<Board> getUserBoards(User user) {
+	public List<Board> getUserBoards(AppUser user) {
 		return boardRepository.findByUser(user);
 	}
 

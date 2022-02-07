@@ -26,6 +26,6 @@ public class Board {
     private List<Ship> ships;
     
     @ManyToOne
-    private User user;
+    private AppUser user;
 	
 }

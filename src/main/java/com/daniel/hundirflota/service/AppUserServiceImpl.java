@@ -4,36 +4,36 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.daniel.hundirflota.entity.User;
-import com.daniel.hundirflota.repository.UserRepository;
+import com.daniel.hundirflota.entity.AppUser;
+import com.daniel.hundirflota.repository.AppUserRepository;
 
 @Service
-public class UserServiceImpl implements UserService {
+public class AppUserServiceImpl implements AppUserService {
 
 	@Autowired
 	private PasswordEncoder passwordEncoder;
 	
 	@Autowired
-	UserRepository userRepository;
+	AppUserRepository userRepository;
 	
 	@Override
-	public User save(User user) {
+	public AppUser save(AppUser user) {
     	user.setPassword(passwordEncoder.encode(user.getPassword()));
     	return userRepository.save(user);
 	}
 
 	@Override
-	public User edit(User u) {
+	public AppUser edit(AppUser u) {
 		return userRepository.save(u);
 	}
 
 	@Override
-	public User findByEmail(String email) {
+	public AppUser findByEmail(String email) {
 		return userRepository.findByEmail(email).orElse(null);
 	}
 
 	@Override
-	public User findById(Long id) {
+	public AppUser findById(Long id) {
 		return userRepository.findById(id).orElse(null);
 	}
 

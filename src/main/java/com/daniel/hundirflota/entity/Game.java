@@ -25,6 +25,6 @@ public class Game {
     private Board boardB;
 
     @ManyToOne
-    private User winner;
+    private AppUser winner;
 	
 }

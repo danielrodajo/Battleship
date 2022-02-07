@@ -21,10 +21,10 @@ public class Invitation {
     private Long id;
 
 	@ManyToOne
-	private User transmitter;
+	private AppUser transmitter;
 
 	@ManyToOne
-	private User receiver;
+	private AppUser receiver;
     
     private Instant issuedAt;
     

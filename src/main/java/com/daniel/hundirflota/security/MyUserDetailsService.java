@@ -10,22 +10,22 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
-import com.daniel.hundirflota.entity.User;
-import com.daniel.hundirflota.repository.UserRepository;
+import com.daniel.hundirflota.entity.AppUser;
+import com.daniel.hundirflota.repository.AppUserRepository;
 
 @Component
 public class MyUserDetailsService implements UserDetailsService {
 
 	@Autowired
-	private UserRepository userRepository;
+	private AppUserRepository userRepository;
 	
 	@Override
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
-		Optional<User> userRes = userRepository.findByEmail(email);
+		Optional<AppUser> userRes = userRepository.findByEmail(email);
 		if (userRes.isEmpty()) {
 			throw new UsernameNotFoundException(String.format("No existe ningún usuario con el siguiente correo: %s", email));
 		}
-		User user = userRes.get();
+		AppUser user = userRes.get();
 		return new org.springframework.security.core.userdetails.User(
 				email,
 				user.getPassword(),

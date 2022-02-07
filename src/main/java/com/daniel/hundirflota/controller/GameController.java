@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.daniel.hundirflota.entity.Board;
-import com.daniel.hundirflota.entity.User;
+import com.daniel.hundirflota.entity.AppUser;
 import com.daniel.hundirflota.service.BoardService;
 
 @RestController
@@ -20,7 +20,7 @@ public class GameController extends GlobalController {
     
     @GetMapping("/currentgames")
     public List<Board> getUserBoards() {
-    	User user = getUserDetails();
+    	AppUser user = getAppUserDetails();
     	return boardService.getUserBoards(user);
     }
     

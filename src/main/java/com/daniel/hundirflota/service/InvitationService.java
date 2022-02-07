@@ -3,16 +3,16 @@ package com.daniel.hundirflota.service;
 import java.util.List;
 
 import com.daniel.hundirflota.entity.Invitation;
-import com.daniel.hundirflota.entity.User;
+import com.daniel.hundirflota.entity.AppUser;
 
 public interface InvitationService {
 
-	List<Invitation> getInvitations(User user);
+	List<Invitation> getInvitations(AppUser user);
 	
-	boolean sendInvitation(User transmitter, User receiver);
+	Boolean sendInvitation(AppUser transmitter, AppUser receiver);
 	
-	boolean acceptInvitation();
+	Boolean acceptInvitation();
 	
-	boolean rejectInvitation();
+	Boolean rejectInvitation();
 	
 }
