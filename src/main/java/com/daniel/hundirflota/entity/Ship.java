@@ -1,7 +1,6 @@
 package com.daniel.hundirflota.entity;
 
 import javax.persistence.Column;
-import javax.persistence.Embeddable;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -14,11 +13,6 @@ import javax.persistence.Id;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Embeddable
-class Coordinates{
-    int x;
-    int y;
-}
 @Entity
 @Data
 @NoArgsConstructor
