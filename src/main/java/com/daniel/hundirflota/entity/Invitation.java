@@ -1,5 +1,7 @@
 package com.daniel.hundirflota.entity;
 
+import java.time.Instant;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,16 +13,17 @@ import lombok.NoArgsConstructor;
 @Entity
 @Data
 @NoArgsConstructor
-public class Game {
-
-    @Id
+public class Invitation {
+	
+	@Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private Board boardA;
-    
-    private Board boardB;
-    
-    private User winner;
+	private User transmitter;
 	
+	private User receiver;
+    
+    private Instant issuedAt;
+    
+    private Boolean accepted;
 }
