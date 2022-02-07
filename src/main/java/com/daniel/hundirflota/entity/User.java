@@ -1,5 +1,7 @@
 package com.daniel.hundirflota.entity;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -30,6 +32,6 @@ public class User {
     private String password;
     
     @OneToMany
-    private Board boards;
+    private List<Board> boards;
 
 }

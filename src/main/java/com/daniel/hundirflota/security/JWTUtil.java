@@ -2,6 +2,7 @@ package com.daniel.hundirflota.security;
 
 import java.util.Date;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -11,12 +12,12 @@ import com.auth0.jwt.exceptions.JWTCreationException;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.auth0.jwt.interfaces.JWTVerifier;
+import com.daniel.hundirflota.config.BattleshipConfig;
 
 @Component
 public class JWTUtil {
 
-    @Value("${jwt_secret}")
-    private String secret;
+	@Autowired private BattleshipConfig config;
 
     public String generateToken(String email) throws IllegalArgumentException, JWTCreationException {
         return JWT.create()
@@ -24,11 +25,11 @@ public class JWTUtil {
                 .withClaim("email", email)
                 .withIssuedAt(new Date())
                 .withIssuer("Hundir La Flota")
-                .sign(Algorithm.HMAC256(secret));
+                .sign(Algorithm.HMAC256(config.getJwtConfig().getSecretKey()));
     }
 
     public String validateTokenAndRetrieveSubject(String token)throws JWTVerificationException {
-        JWTVerifier verifier = JWT.require(Algorithm.HMAC256(secret))
+        JWTVerifier verifier = JWT.require(Algorithm.HMAC256(config.getJwtConfig().getSecretKey()))
                 .withSubject("User Details")
                 .withIssuer("Hundir La Flota")
                 .build();

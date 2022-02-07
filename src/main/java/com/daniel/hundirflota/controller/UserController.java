@@ -18,7 +18,7 @@ public class UserController extends GlobalController {
 	@Autowired private BoardService boardService;
 
     @GetMapping("/info")
-    public User getUserDetails(){
+    public User getUser(){
         return getUserDetails();
     }
     
