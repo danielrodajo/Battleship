@@ -37,7 +37,7 @@ public class AuthController {
     	try {
     		UsernamePasswordAuthenticationToken authInputToken = new UsernamePasswordAuthenticationToken(body.getEmail(), body.getPassword());
     		authManager.authenticate(authInputToken);
-    		System.out.println("TEST");
+
     		String token = jwtUtil.generateToken(body.getEmail());
     		
     		return Collections.singletonMap("jwt-token", token);
