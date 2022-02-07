@@ -1,5 +1,7 @@
 package com.daniel.hundirflota.entity;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,9 +23,9 @@ public class Board {
     private Long id;
 
     @OneToMany
-    private Ship ships;
+    private List<Ship> ships;
     
     @ManyToOne
-    private User user;
+    private AppUser user;
 	
 }

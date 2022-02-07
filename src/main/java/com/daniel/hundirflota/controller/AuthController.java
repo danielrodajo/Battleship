@@ -12,20 +12,20 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.daniel.hundirflota.entity.User;
+import com.daniel.hundirflota.entity.AppUser;
 import com.daniel.hundirflota.models.LoginCredentials;
 import com.daniel.hundirflota.security.JWTUtil;
-import com.daniel.hundirflota.service.UserService;
+import com.daniel.hundirflota.service.AppUserService;
 
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
-	@Autowired private UserService userService;
+	@Autowired private AppUserService userService;
     @Autowired private JWTUtil jwtUtil;
     @Autowired private AuthenticationManager authManager;
     
     @PostMapping("/register")
-    public Map<String, Object> registerHandler(@RequestBody User user) {
+    public Map<String, Object> registerHandler(@RequestBody AppUser user) {
     	user = userService.save(user);
     	String token = jwtUtil.generateToken(user.getEmail());
     	

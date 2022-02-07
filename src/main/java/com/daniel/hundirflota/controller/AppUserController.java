@@ -6,20 +6,20 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.daniel.hundirflota.entity.User;
+import com.daniel.hundirflota.entity.AppUser;
 import com.daniel.hundirflota.service.BoardService;
-import com.daniel.hundirflota.service.UserService;
+import com.daniel.hundirflota.service.AppUserService;
 
 @RestController
 @RequestMapping("/api/user")
-public class UserController extends GlobalController {
+public class AppUserController extends GlobalController {
 	
-	@Autowired private UserService userService;
+	@Autowired private AppUserService userService;
 	@Autowired private BoardService boardService;
 
     @GetMapping("/info")
-    public User getUserDetails(){
-        return getUserDetails();
+    public AppUser getAppUser(){
+        return getAppUserDetails();
     }
     
     

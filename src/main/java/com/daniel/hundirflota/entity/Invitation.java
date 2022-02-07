@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,9 +20,11 @@ public class Invitation {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-	private User transmitter;
-	
-	private User receiver;
+	@ManyToOne
+	private AppUser transmitter;
+
+	@ManyToOne
+	private AppUser receiver;
     
     private Instant issuedAt;
     

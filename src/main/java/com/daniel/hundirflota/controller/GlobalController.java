@@ -4,15 +4,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
-import com.daniel.hundirflota.entity.User;
-import com.daniel.hundirflota.service.UserService;
+import com.daniel.hundirflota.entity.AppUser;
+import com.daniel.hundirflota.service.AppUserService;
 
 @Component
 public class GlobalController {
 
-	@Autowired private UserService userService;
+	@Autowired private AppUserService userService;
 
-    public User getUserDetails(){
+    public AppUser getAppUserDetails(){
         String email = (String) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         return userService.findByEmail(email);
     }
