@@ -17,12 +17,15 @@ public class GameController extends GlobalController {
 
 	@Autowired private BoardService boardService;
     
+	@GetMapping("/creategame")
+	public void createGame() {
+		
+	}
+	
     @GetMapping("/currentgames")
     public List<Board> getUserBoards() {
     	AppUser user = getAppUserDetails();
     	return boardService.getUserBoards(user);
     }
-    
-    
     
 }
